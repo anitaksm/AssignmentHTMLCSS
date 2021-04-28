@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <title>Expense Tracker</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.box-container{
+    padding: 10px 0;
+    padding-bottom: 45px;
+    border:1 px solid #eeeeee;
+    background-color: white;
+    line-height: 1;
+    width: 380px;
+}
+.box {
+  float: left;
+  width: 45%;
+  text-align: center;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-right: 1px solid lightgray;
+}
+
+.box2{
+    padding-left: 10px;
+    border:none;
+}
+
+.box p{
+    margin: 0;
+}
+.clearfix {
+ overflow: auto;
+}
+#income{
+    color: green;
+    font-weight: bold;
+}
+#expense{
+    color: red;
+    font-weight: bold;
+}
+
+input:focus{
+    border: 1px solid #1670BE;
+    box-shadow: 0 0 3px #1670BE;
+    outline-offset: 0px;
+    outline: none;
+}
+#Button{
+    background-color: rgb(247, 90, 247);
+    border: none;
+    opacity: 3px;
+    color: white;
+}
+.container{
+    width: 25%;
+    margin:auto;
+    overflow: hidden;
+}
+.fix{
+    width: 100%;
+    padding: 7px;
+    height: max-content;
+    border: 1px solid darkgrey;
+    color: darkgrey;
+    margin-bottom: 2px;
+}
+
+.text{
+    font-family:sans-serif;
+    padding-bottom:1px;
+    margin-bottom: 1px;
+}
+</style>
+</head>
+<body class="container" style="background-color: lightgrey;">
+    
+    <h2 style="text-align: center;" class="text"><b>Expense Tracker</b></h2><br>
+    <div><h4 class="text">YOUR BALANCE</h4>
+    <h1 style="margin-top: 2px;margin-bottom: 10px;"><b>$0.0</b></h1></div>
+    <div class="clearfix box-container">
+    <div class="box text" ><b>INCOME</b><p id="income">0.00$</p></div>
+    <div class="box box2 text"><b>EXPENSE</b><p id="expense">0.00$</p></div>
+</div><br><br>
+
+    <p style="padding-top: 3%;" class="text"><b>History</b></p>
+    <hr style="height:1px;border:none;color:darkgrey;background-color:darkgrey;" />
+    <p style="padding-top: 3%;" class="text"><b>Add new transaction</b></p>
+    <hr style="height:1px;border:none;color:darkgrey;background-color:darkgrey;" /><br><br>
+    <form>
+    <label for="Text" style="padding-top: 3%;" class="text"><b>Text</b></label><br>
+    <input type="text" id="TEXT" name="Text" value="Enter Text..." class="fix" ><br><br>
+    <label for="in" style="padding-top: 3%;" class="text" class="fix"><b>Amount<br>(negative-expensive,positive-income)</b></label><br>
+    <input type="text" id="in" name="in" value="Enter Amount..." class="fix" ><br><br>
+    <input type="button" id="Button" name="Button" value="Add Transaction" class="fix" >
+    </form>
+    
+    
+</body>
